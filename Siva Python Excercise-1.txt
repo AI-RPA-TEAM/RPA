@@ -1,0 +1,82 @@
+-----> Question1
+Print("Twinkle, twinkle, little star, \n\tHow I wonder what you are! \n\t\tUp above the world so high, \n\t\tLike a diamond in the sky. \nTwinkle, twinkle, little star, \n\tHow I wonder what you are!")
+
+-----> Question2
+import sys
+Print("Python version")
+print (sys.version)
+
+-----> Question3
+import datetime
+now = datetime.datetime.now()
+print ("Current date and time : ")
+print (now.strftime("%Y-%m-%d %H:%M:%S"))
+
+-----> Question4
+fname = input("Enter your First Name : ")
+lname = input("Enter your Last Name : ")
+print (lname + " " + fname)
+
+-----> Question5
+values = input("Please enter some comma seprated numbers : ")
+list = values.split(",")
+tuple = tuple(list)
+Print('List  is: ',list)
+Print('Tuple is: ',tuple)
+
+-----> Question6
+import string
+filename=input("Input the file name with extension: ") 
+dot= filename.split(".")
+Print("Extention is: ",dot[1])
+
+-----> Question7
+color_list = ["Red","Green","White" ,"Black"]
+Print("First colour: ",color_list[1])
+Print("Last colour: ",color_list[-1])
+
+-----> Question8
+exam_st_date = (11, 12, 2014)
+Print("The examination will start from :", end="")
+Print(exam_st_date[0],exam_st_date[1],exam_st_date[2], sep="/")
+
+-----> Question9
+n=input("enter as number: ")
+nn=n*2
+nnn=n*3
+try:
+    n=int(n)
+    nn=int(nn)
+    nnn=int(nnn)
+    sum=n+nn+nnn
+    Print("Result: ",sum)
+except:
+    Print("Entered value is not an integer")
+
+-----> Question10
+Print(abs.__doc__)
+""" Print(pow.__doc__)
+Print(chr.__doc__)
+Print(enumerate.__doc__)
+Print(input.__doc__) """
+
+-----> Question11
+import calendar
+yyyy = int(input("Input the year : "))
+mm = int(input("Input the month : "))
+Print(calendar.month(yyyy, mm))
+
+-----> Question12
+Print("""
+a string that you "don't" have to escape
+This
+is a  ....... multi-line
+heredoc string --------> example
+""")
+
+-----> Question13
+from datetime import date
+first = date(2014, 7, 2)
+last = date(2014, 7, 11)
+diff = last - first
+Print(diff.days)
