@@ -1,0 +1,74 @@
+#Q1  
+import datetime
+name= input("Enter your name: ")
+dob= input("Enter your Date of Birth in dd-mm-yyyy format: ")
+dd,mm,yyyy=map(int, dob.split('-'))
+dobdate= datetime.date(yyyy, mm, dd)
+hunderedyear=yyyy+100
+hundday=datetime.datetime(hunderedyear, mm, dd,00,00,00,00)
+print("Hello %s, You will turn 100 years old in the year %s. Day of your 100th Birthday is on %s."%(name,hunderedyear,hundday.strftime("%A")))
+
+#Q2
+num = int(input("Please choose a number to divide: "))
+rngnum=(num//2)+1
+listRange = list(range(1,rngnum+1))
+divisorList = []
+for number in listRange:
+    if num % number == 0:
+        divisorList.append(number)
+divisorList.append(num)
+print(divisorList) 
+
+#Q3
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+seta=set(a)
+setb=set(b)
+setc=seta.intersection(setb)
+c=list(setc)
+print(c) 
+
+#Q4
+def reverse(s): 
+    return s[::-1] 
+  
+def isPalindrome(s): 
+    # Calling reverse function 
+    rev = reverse(s) 
+  
+    # Checking if both string are equal or not 
+    if (s == rev): 
+        return True
+    return False
+  
+  
+# Driver code 
+s = input("Enter a word")
+ans = isPalindrome(s) 
+  
+if ans == 1: 
+    print("Yes") 
+else: 
+    print("No") 
+
+#Q5
+from Maths import Math
+
+radius=input("Enter the radius: ")
+circle=Math(radius)
+circle.Area()
+circle.Circumference()
+
+Maths.py
+class Math:
+    pi=22/7
+    def __init__(self,radius):
+        self.radius=float(radius)
+
+    def Area(self):
+        self.area=self.pi*self.radius*self.radius
+        print("area = ", self.area)
+    
+    def Circumference(self):
+        self.circumference=2.0*self.pi*self.radius
+        print("Circumference = ",self.circumference)
