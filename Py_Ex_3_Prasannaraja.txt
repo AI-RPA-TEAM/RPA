@@ -1,0 +1,79 @@
+#problem 1
+def sumorproduct(n1,n2):
+    return([n1 + n2 if n1*n2 > 1000 else n1*n2])
+
+
+#problem 2
+def iterate(n):
+    sum_=0
+    for i in range(0,n):
+        print("Current Number " ,i," Previous Number ",sum_," Sum: ",sum_+i)
+        sum_=i
+    
+
+#problem 3
+def even_indices_of_string(string):
+    for i in range(0,len(string),2):
+        print("index[",i,"]",string[i])
+
+
+#problem 4
+def removeChars(string,n):
+    string=string[(n)::]
+    return(string)
+
+
+#problem 5
+def check_first_last(li):
+    if(li[0] == li[-1]):
+        print("result is ",True)
+    else:
+        print("result is ",False)
+
+
+#problem 6
+def divisible_by_5(li):
+    for i in li:
+        if i%5 == 0:
+            print(i)
+           
+
+#problem 7
+def count_of_emma(string):
+    count=0
+    li=string.split(" ")
+    for i in li:
+        if(i == "Emma"):
+            count+=1
+    print("Emma appeared ",count," times")
+        
+
+#problem 8
+def pattern(n):
+    for i in range(1,n+1):
+        for j in range(0,i):
+            print(i,end=" ")
+        print("\n")
+
+
+#problem 9
+def reverse_number(n):
+    rev=0
+    rem=0
+    temp=n
+    while(n>0):
+        rem=n%10
+        rev=(rev*10)+rem
+        n=n//10
+    if(temp == rev):
+        print("The original and reverse number is the same: ",True)
+    else:
+        print("The original and reverse number is the same: ",False)
+   
+
+#problem 10
+def odd_even(l1,l2):
+    odd,even=[i for i in l1 if i % 2 !=0],[j for j in l2 if j%2 == 0]
+    print("First list is ",l1)
+    print("Second list is ",l2)
+    print("The result list is ",odd,even)
